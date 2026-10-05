@@ -208,7 +208,8 @@ code { font-family: var(--f-ui); font-size: 0.95em; background: #F3F6F8; padding
 /* v7: kolom kanan pembuka diisi angka kunci + alokasi, rata atas */
 .pembuka { align-items: stretch; }
 .pembuka > div:first-child { display: flex; flex-direction: column; }
-.pembuka > div:first-child .catatan-data { margin-bottom: 0; }
+.pembuka > div:first-child .tombol-baris { margin-bottom: 0; margin-top: auto; }
+.pembuka > div:first-child .meta { margin-bottom: 26px; }
 .pembuka-kanan { display: flex; flex-direction: column; gap: 18px; padding-top: 8px; }
 .pembuka-kanan .tangga { margin: 0; flex: 1; display: flex; flex-direction: column; }
 .pembuka-kanan .alokasi { margin-bottom: 0; flex: 1; display: flex; flex-direction: column; justify-content: space-evenly; }
@@ -243,7 +244,6 @@ code { font-family: var(--f-ui); font-size: 0.95em; background: #F3F6F8; padding
       <a class="tombol kedua" href="https://drive.google.com/file/d/1PL59GrHI-ZD87QTChhbDHAewwFJd4b6Z/view?usp=sharing">Baca memo keputusan</a>
       <a class="tombol kedua" href="https://docs.google.com/document/d/1ZrIZpOtAFbNOBuTuH0Xio1yzUDBXXiJUfLxGqKqqEtY/edit?usp=sharing">Baca catatan keputusan</a>
     </div>
-    <p class="catatan-data">Data dalam studi kasus ini dibuat menyerupai pola transaksi toko online sungguhan. Ini bukan data perusahaan nyata, dan tidak disajikan sebagai pengalaman kerja di perusahaan mana pun.</p>
   </div>
   <div class="pembuka-kanan">
   <div class="angka-baris hero-angka">
@@ -461,6 +461,7 @@ code { font-family: var(--f-ui); font-size: 0.95em; background: #F3F6F8; padding
 
 <footer class="akhir">
   <p>Dibuat oleh <b>Aulia Aorama</b>. Perhitungan lengkap ada di <a href="https://colab.research.google.com/drive/1Dg-xTMAmUD9O0sIo7EfD25NtCa_z7xCf?usp=sharing">notebook analisis</a>, ringkasannya di <a href="https://drive.google.com/file/d/1PL59GrHI-ZD87QTChhbDHAewwFJd4b6Z/view?usp=sharing">memo keputusan</a>, dan alasan setiap pilihan di <a href="https://docs.google.com/document/d/1ZrIZpOtAFbNOBuTuH0Xio1yzUDBXXiJUfLxGqKqqEtY/edit?usp=sharing">catatan keputusan</a>. Data dan seluruh berkas juga tersimpan di <a href="https://github.com/aoramaaulia-collab/Marketplace-RFM-Customer-Segmentation">repositori GitHub</a>. Hubungi lewat <a href="mailto:aoramaaulia@gmail.com">aoramaaulia@gmail.com</a> atau lihat proyek lain di <a href="https://github.com/aoramaaulia-collab">GitHub</a>.</p>
+  <p class="kecil catatan-akhir"><b>Catatan data.</b> Data dalam studi kasus ini dibuat menyerupai pola transaksi toko online sungguhan. Ini bukan data perusahaan nyata, dan tidak disajikan sebagai pengalaman kerja di perusahaan mana pun.</p>
   <p class="kecil">Angka anggaran Rp 150 juta, tingkat buka email 12%, dan pemakaian voucher 3% dikutip dari laporan promo sebelumnya dan tidak dicek dari data transaksi. Ketiganya hanya dipakai sebagai latar belakang, bukan dasar temuan.</p>
 </footer>
 </article>
