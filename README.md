@@ -19,12 +19,13 @@ Project ini menyegmentasi **48.130 transaksi dari 5.000 pelanggan** sebuah marke
 4. [Tools yang digunakan](#tools-yang-digunakan)
 5. [Data dan pembersihan](#data-dan-pembersihan)
 6. [Temuan utama](#temuan-utama)
-7. [Rekomendasi](#rekomendasi)
-8. [Yang akan diukur](#yang-akan-diukur)
-9. [Berkas pendukung](#berkas-pendukung)
-10. [Cara menjalankan sendiri](#cara-menjalankan-sendiri)
-11. [Keterbatasan dan pengembangan berikutnya](#keterbatasan-dan-pengembangan-berikutnya)
-12. [Kamus istilah](#kamus-istilah)
+7. [Uji bantahan](#uji-bantahan)
+8. [Rekomendasi](#rekomendasi)
+9. [Yang akan diukur](#yang-akan-diukur)
+10. [Berkas pendukung](#berkas-pendukung)
+11. [Cara menjalankan sendiri](#cara-menjalankan-sendiri)
+12. [Keterbatasan dan pengembangan berikutnya](#keterbatasan-dan-pengembangan-berikutnya)
+13. [Kamus istilah](#kamus-istilah)
 
 ---
 
@@ -147,6 +148,22 @@ Total nilai transaksi bersih: Rp 11,10 miliar.
 3. **Mayoritas pelanggan adalah pembeli ringan.** Segmen Lost terbelah dua sama besar: 1.300 masih belanja dalam 90 hari terakhir tetapi hanya 5 sampai 7 kali dalam 15 bulan, dan 1.300 sudah lebih lama tak terlihat dengan 2 sampai 4 transaksi. Label "Lost" terlalu keras untuk separuh pertamanya, dan ini dinyatakan terbuka.
 
 **Uji kepekaan.** Tujuh geseran ambang diuji satu per satu. Menurunkan ambang frekuensi Loyal dari 8 ke 6 memindahkan 824 pelanggan, sedangkan menaikkan ambang hari Champions 50% tidak memindahkan seorang pun. Di ketujuh geseran, Champions tetap memegang 28,7% sampai 30,7% nilai, dan kelompok yang baru menjauh tetap ada.
+
+---
+
+## Uji bantahan
+
+Sebelum rekomendasi ditulis, setiap temuan diserang dengan bantahan paling wajar yang bisa muncul di rapat. Temuan yang tidak lolos lebih baik gugur di sini daripada di depan pemegang anggaran.
+
+| Bantahan | Jawaban | Status |
+|---|---|---|
+| *"8% memegang 28,7% itu artefak dari garis yang kamu tarik sendiri."* | Bentuk sebarannya tidak bergantung pada ambang: kurva konsentrasi sudah menyimpang dari garis merata sebelum ambang apa pun ditarik, dan di tujuh geseran ambang kelompok teratas tetap memegang 28,7% sampai 30,7% nilai | Lolos |
+| *"857 itu artefak, karena riwayat per Desember lebih pendek."* | Dengan panjang riwayat disamakan, perpindahan Loyal ke At Risk tetap 850. Frequency dan Monetary ke-857 orang itu identik di kedua tanggal, karena mereka tidak bertransaksi sama sekali sesudah 2025-12-30 | Lolos |
+| *"Rp 2,74 miliar itu nilai masa lalu. Kamu tidak tahu berapa yang kembali."* | Benar seluruhnya. Redaksinya dikoreksi dari "win-back akan mengembalikan Rp 2,74 miliar" menjadi nilai historis ditambah usulan uji, dan dari koreksi itu lahir desain uji dengan kelompok pembanding | Lolos setelah redaksi dikoreksi |
+| *"2.400 duplikat itu bisa jadi transaksi ganda yang sah."* | Baris-baris itu identik termasuk `TransactionID`. Dari 2.346 nomor transaksi yang muncul lebih dari sekali, nol konflik tersisa setelah dedup | Lolos |
+| *"Dari mana kamu tahu kuartal depan menyerupai lima kuartal terakhir?"* | Tidak bisa dijawab dari data transaksi. Dinyatakan sebagai asumsi, dengan mitigasi segmentasi ulang tiap kuartal memakai pipeline dan jendela yang sama | Diakui sebagai batas |
+
+Matriks perpindahan segmen yang menopang bantahan kedua ada di portofolio dan di notebook (Gambar 4).
 
 ---
 
