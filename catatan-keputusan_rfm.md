@@ -11,7 +11,7 @@
 
 Dokumen ini adalah sumber tunggal angka untuk keempat berkas keluaran. Memo, lampiran bukti, dan portofolio menyalin dari sini, tidak menghitung ulang sendiri.
 
-Analisis yang menghasilkan angka-angka ini dikerjakan di notebook, yang menutup keenam langkah kerangka halaman 02 dan memuat profil data, uji kepekaan, uji bantahan, serta delapan gambar: https://colab.research.google.com/github/aoramaaulia-collab/Marketplace-RFM-Customer-Segmentation/blob/main/analisis_rfm.ipynb
+Analisis yang menghasilkan angka-angka ini dikerjakan di notebook, yang menutup keenam langkah kerangka halaman 02 dan memuat profil data, uji kepekaan, uji bantahan, serta delapan gambar: https://colab.research.google.com/drive/1Dg-xTMAmUD9O0sIo7EfD25NtCa_z7xCf?usp=sharing
 
 ---
 

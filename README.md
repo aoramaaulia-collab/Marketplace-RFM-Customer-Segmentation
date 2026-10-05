@@ -1,7 +1,7 @@
 # Segmentasi Pelanggan Marketplace: Anggaran Retensi Rp 150 Juta
 
 [![Buka portofolio](https://img.shields.io/badge/Portofolio-buka%20halaman-1F5673)](https://aoramaaulia-collab.github.io/Marketplace-RFM-Customer-Segmentation/)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/aoramaaulia-collab/Marketplace-RFM-Customer-Segmentation/blob/main/analisis_rfm.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1Dg-xTMAmUD9O0sIo7EfD25NtCa_z7xCf?usp=sharing)
 
 Project ini menyegmentasi **48.130 transaksi dari 5.000 pelanggan** sebuah marketplace ritel daring dengan **SQL di DuckDB**. Tujuannya membagi **anggaran retensi Rp 150 juta per kuartal**, yang selama ini dibagi rata ke semua pelanggan. Hasilnya adalah usulan dua program terukur, lengkap dengan kelompok pembanding dan ukuran keberhasilan yang ditetapkan sebelum programnya jalan.
 
@@ -181,7 +181,7 @@ Tiga ukuran ditetapkan sebelum program berjalan dan dibaca pada **2026-06-30**:
 | Berkas | Isi |
 |---|---|
 | [`docs/index.html`](docs/index.html) | Halaman portofolio, dipublikasikan lewat GitHub Pages |
-| [`analisis_rfm.ipynb`](analisis_rfm.ipynb) | Seluruh kueri SQL, uji kepekaan, uji bantahan, delapan gambar, dan daftar penugasan uji win-back. [Buka di Colab](https://colab.research.google.com/github/aoramaaulia-collab/Marketplace-RFM-Customer-Segmentation/blob/main/analisis_rfm.ipynb) |
+| [`analisis_rfm.ipynb`](analisis_rfm.ipynb) | Seluruh kueri SQL, uji kepekaan, uji bantahan, delapan gambar, dan daftar penugasan uji win-back. [Buka di Colab](https://colab.research.google.com/drive/1Dg-xTMAmUD9O0sIo7EfD25NtCa_z7xCf?usp=sharing) |
 | [`memo-keputusan_rfm.pdf`](memo-keputusan_rfm.pdf) | Satu halaman untuk pemegang anggaran: rekomendasi, batas, dan syarat pembatal. [Versi Google Drive](https://drive.google.com/file/d/1PL59GrHI-ZD87QTChhbDHAewwFJd4b6Z/view?usp=sharing) |
 | [`catatan-keputusan_rfm.md`](catatan-keputusan_rfm.md) | Setiap definisi, ambang, dan pilihan yang ditolak, berikut alasannya dan kueri final. [Versi Google Docs](https://docs.google.com/document/d/1ZrIZpOtAFbNOBuTuH0Xio1yzUDBXXiJUfLxGqKqqEtY/edit?usp=sharing) |
 | [`lampiran-bukti_rfm.pdf`](lampiran-bukti_rfm.pdf) | Tiga gambar penopang memo dan tabel telusur asal-usul setiap angka |
@@ -192,7 +192,7 @@ Tiga ukuran ditetapkan sebelum program berjalan dan dibaca pada **2026-06-30**:
 
 ### Paling mudah: Google Colab
 
-Klik tombol **Open in Colab** di atas, unggah `transactions.csv` ke panel berkas Colab, lalu jalankan semua sel.
+Klik tombol **Open in Colab** di atas, simpan salinannya ke Drive Anda (File → Simpan salinan di Drive), unggah `transactions.csv` ke panel berkas Colab, lalu jalankan semua sel.
 
 ### Di komputer sendiri
 
