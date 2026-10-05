@@ -196,13 +196,22 @@ code { font-family: var(--f-ui); font-size: 0.95em; background: #F3F6F8; padding
 @media print { .bantah { break-inside: auto; } .bantah-label, .bantah-tanya { break-after: avoid; } .fig-grafik img { max-width: 420px; } }
 
 /* v6: rata kiri-kanan dan keterangan grafik empat baris */
-article p, article li, .fig-ket dd, .pembuka p.lead, .catatan-data, .tangga > p {
-  text-align: justify; text-justify: inter-word; hyphens: auto; -webkit-hyphens: auto;
+@media (min-width: 700px), print {
+  article p, article li, .fig-ket dd, .pembuka p.lead, .catatan-data, .tangga > p {
+    text-align: justify; text-justify: inter-word; hyphens: auto; -webkit-hyphens: auto;
+  }
 }
 .pembuka h1, h2, h3, .bantah-label, .fig-judul, .langkah, .gerbang, .alokasi span, .belah > div, .toc p, .angka span { text-align: left; }
 .fig-ket div.cara { background: #F3F6F8; border-radius: 10px; padding: 10px 12px; }
 .istilah { border: 1px solid var(--garis); border-radius: 14px; padding: 16px 20px 8px; margin: 6px 0 22px; background: #FFFFFF; }
 .istilah h3 { margin-top: 0; }
+/* v7: kolom kanan pembuka diisi angka kunci + alokasi, rata atas */
+.pembuka { align-items: start; }
+.pembuka-kanan { display: flex; flex-direction: column; gap: 18px; padding-top: 10px; }
+.pembuka-kanan .tangga { margin: 0; }
+.hero-angka { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; margin: 0; }
+.hero-angka .angka { background: #FFFFFF; }
+@media print { .hero-angka { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; } .pembuka-kanan { padding-top: 0; } }
 
 </style>
 </head>
@@ -225,6 +234,13 @@ article p, article li, .fig-ket dd, .pembuka p.lead, .catatan-data, .tangga > p 
     </div>
     <p class="catatan-data">Data dalam studi kasus ini dibuat menyerupai pola transaksi toko online sungguhan. Ini bukan data perusahaan nyata, dan tidak disajikan sebagai pengalaman kerja di perusahaan mana pun.</p>
   </div>
+  <div class="pembuka-kanan">
+  <div class="angka-baris hero-angka">
+    <div class="angka"><b>28,7%</b><span>total belanja berasal dari 400 pelanggan, hanya 8% dari semua pelanggan</span></div>
+    <div class="angka"><b>857</b><span>pelanggan yang tiga bulan lalu masih rajin, kini berhenti belanja</span></div>
+    <div class="angka"><b>Rp 2,74 M</b><span>total belanja selama ini dari pelanggan yang mulai menjauh</span></div>
+    <div class="angka"><b>52%</b><span>pelanggan memang jarang belanja sejak awal</span></div>
+  </div>
   <div class="tangga">
     <h2>Ke mana Rp 150 juta pergi</h2>
     <p>Usulan pembagian anggaran untuk April sampai Juni 2026, sebagai pengganti Rp 30.000 per orang bila dibagi rata.</p>
@@ -233,6 +249,7 @@ article p, article li, .fig-ket dd, .pembuka p.lead, .catatan-data, .tangga > p 
       <li><span class="titik t-amber"></span><b>Rp 50 juta</b><span>Uji coba mengajak kembali 552 pelanggan yang baru berhenti belanja: separuh dikirimi program, separuh tidak sebagai pembanding</span></li>
       <li><span class="titik t-slate"></span><b>Rp 10 juta</b><span>Cadangan untuk mengukur hasil program</span></li>
     </ul>
+  </div>
   </div>
 </header>
 
@@ -247,12 +264,6 @@ article p, article li, .fig-ket dd, .pembuka p.lead, .catatan-data, .tangga > p 
 
 <section id="ringkasan">
 <h2>Ringkasan</h2>
-<div class="angka-baris">
-  <div class="angka"><b>28,7%</b><span>total belanja berasal dari 400 pelanggan, hanya 8% dari semua pelanggan</span></div>
-  <div class="angka"><b>857</b><span>pelanggan yang tiga bulan lalu masih rajin, kini berhenti belanja</span></div>
-  <div class="angka"><b>Rp 2,74 M</b><span>total belanja selama ini dari pelanggan yang mulai menjauh</span></div>
-  <div class="angka"><b>52%</b><span>pelanggan memang jarang belanja sejak awal</span></div>
-</div>
 <p>Anggaran promosi Rp 150 juta per tiga bulan selama ini dibagi rata ke 5.000 pelanggan, sehingga setiap orang hanya kebagian sekitar Rp 30.000. Analisis ini menunjukkan bahwa pelanggan tidak sama nilainya. Sebagian kecil pelanggan menyumbang porsi belanja yang jauh lebih besar dari jumlahnya, dan ada sekelompok pelanggan bernilai yang baru saja berhenti belanja. Kalau seluruh anggaran diarahkan ke 400 pelanggan terbaik saja, setiap orang bisa mendapat Rp 375.000.</p>
 <p>Rekomendasinya bukan sekadar memindahkan uang. Setiap langkah pengolahan data dicatat, batas antar-kelompok pelanggan diuji dengan berbagai cara, dan cara mengukur keberhasilan program sudah ditetapkan sebelum program dimulai, termasuk kelompok pembanding supaya hasilnya bisa dipercaya.</p>
 </section>
