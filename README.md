@@ -153,17 +153,14 @@ Total nilai transaksi bersih: Rp 11,10 miliar.
 
 ## Uji bantahan
 
-Sebelum rekomendasi ditulis, setiap temuan diserang dengan bantahan paling wajar yang bisa muncul di rapat. Temuan yang tidak lolos lebih baik gugur di sini daripada di depan pemegang anggaran.
+Untuk setiap temuan diajukan tiga pertanyaan: penjelasan tandingan apa yang belum disingkirkan, data apa yang akan membatalkannya, dan seberapa jauh asumsinya boleh digeser. Temuan yang tidak lolos lebih baik gugur di sini daripada di rapat.
 
-| Bantahan | Jawaban | Status |
-|---|---|---|
-| *"8% memegang 28,7% itu artefak dari garis yang kamu tarik sendiri."* | Bentuk sebarannya tidak bergantung pada ambang: kurva konsentrasi sudah menyimpang dari garis merata sebelum ambang apa pun ditarik, dan di tujuh geseran ambang kelompok teratas tetap memegang 28,7% sampai 30,7% nilai | Lolos |
-| *"857 itu artefak, karena riwayat per Desember lebih pendek."* | Dengan panjang riwayat disamakan, perpindahan Loyal ke At Risk tetap 850. Frequency dan Monetary ke-857 orang itu identik di kedua tanggal, karena mereka tidak bertransaksi sama sekali sesudah 2025-12-30 | Lolos |
-| *"Rp 2,74 miliar itu nilai masa lalu. Kamu tidak tahu berapa yang kembali."* | Benar seluruhnya. Redaksinya dikoreksi dari "win-back akan mengembalikan Rp 2,74 miliar" menjadi nilai historis ditambah usulan uji, dan dari koreksi itu lahir desain uji dengan kelompok pembanding | Lolos setelah redaksi dikoreksi |
-| *"2.400 duplikat itu bisa jadi transaksi ganda yang sah."* | Baris-baris itu identik termasuk `TransactionID`. Dari 2.346 nomor transaksi yang muncul lebih dari sekali, nol konflik tersisa setelah dedup | Lolos |
-| *"Dari mana kamu tahu kuartal depan menyerupai lima kuartal terakhir?"* | Tidak bisa dijawab dari data transaksi. Dinyatakan sebagai asumsi, dengan mitigasi segmentasi ulang tiap kuartal memakai pipeline dan jendela yang sama | Diakui sebagai batas |
-
-Matriks perpindahan segmen yang menopang bantahan kedua ada di portofolio dan di notebook (Gambar 4).
+| Bantahan | Jawaban |
+|---|---|
+| *"8% memegang 28,7% itu artefak dari garis yang kamu tarik sendiri."* | **Setengah benar.** Angka 400 dan 28,7% bergantung pada ambang, tetapi bentuk sebarannya tidak: Monetary membentang Rp 44.457 sampai Rp 10.878.758 dengan median Rp 1.358.137, dan kurva konsentrasi sudah menyimpang dari garis merata sebelum ambang apa pun ditarik |
+| *"Rp 2,74 miliar itu nilai masa lalu. Kamu tidak tahu berapa yang kembali dan berapa ongkosnya."* | **Benar seluruhnya.** Redaksinya dikoreksi dari "win-back akan mengembalikan Rp 2,74 miliar yang hilang" menjadi nilai historis ditambah usulan uji win-back |
+| *"2.400 duplikat itu transaksi ganda yang sah."* | **Terjawab.** Baris-baris itu identik termasuk `TransactionID`. Dari 2.346 nomor transaksi yang muncul lebih dari sekali, nol konflik tersisa setelah dedup |
+| *"Dari mana kamu tahu kuartal depan menyerupai lima kuartal terakhir?"* | **Tidak punya jawaban.** Dinyatakan sebagai asumsi, dengan mitigasi segmentasi ulang tiap kuartal memakai pipeline yang sama |
 
 ---
 
