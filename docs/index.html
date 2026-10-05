@@ -206,12 +206,23 @@ code { font-family: var(--f-ui); font-size: 0.95em; background: #F3F6F8; padding
 .istilah { border: 1px solid var(--garis); border-radius: 14px; padding: 16px 20px 8px; margin: 6px 0 22px; background: #FFFFFF; }
 .istilah h3 { margin-top: 0; }
 /* v7: kolom kanan pembuka diisi angka kunci + alokasi, rata atas */
-.pembuka { align-items: start; }
-.pembuka-kanan { display: flex; flex-direction: column; gap: 18px; padding-top: 10px; }
-.pembuka-kanan .tangga { margin: 0; }
+.pembuka { align-items: stretch; }
+.pembuka > div:first-child { display: flex; flex-direction: column; }
+.pembuka > div:first-child .catatan-data { margin-bottom: 0; }
+.pembuka-kanan { display: flex; flex-direction: column; gap: 18px; padding-top: 8px; }
+.pembuka-kanan .tangga { margin: 0; flex: 1; display: flex; flex-direction: column; }
+.pembuka-kanan .alokasi { margin-bottom: 0; flex: 1; display: flex; flex-direction: column; justify-content: space-evenly; }
+.pembuka-kanan .alokasi li { padding: 12px 0; }
+.banding { margin-top: 0; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 12px; background: #FFFFFF; border: 1px solid #C9DAE5; border-radius: 14px; padding: 14px 16px; font-family: var(--f-ui); }
+.banding span { display: block; font-size: 0.8rem; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+.banding b { display: block; font-size: 1.45rem; line-height: 1.2; color: var(--muted); margin: 2px 0; }
+.banding small { display: block; font-size: 0.85rem; color: var(--muted); }
+.banding-baru b { color: #1F5673; }
+.banding .panah { font-size: 1.5rem; color: #D97A34; font-weight: 700; }
+.pembuka-kanan .tangga .alokasi { margin-bottom: 14px; }
 .hero-angka { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; margin: 0; }
 .hero-angka .angka { background: #FFFFFF; }
-@media print { .hero-angka { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; } .pembuka-kanan { padding-top: 0; } }
+@media print { .hero-angka { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; } .pembuka-kanan { padding-top: 0; } .pembuka-kanan .tangga, .pembuka-kanan .alokasi { flex: none; display: block; } .alokasi li, .banding { break-inside: avoid; } .pembuka .catatan-data { max-width: none; } .banding { margin-top: 10px; } }
 
 </style>
 </head>
@@ -243,12 +254,17 @@ code { font-family: var(--f-ui); font-size: 0.95em; background: #F3F6F8; padding
   </div>
   <div class="tangga">
     <h2>Ke mana Rp 150 juta pergi</h2>
-    <p>Usulan pembagian anggaran untuk April sampai Juni 2026, sebagai pengganti Rp 30.000 per orang bila dibagi rata.</p>
+    <p>Usulan pembagian anggaran untuk April sampai Juni 2026.</p>
     <ul class="alokasi">
       <li><span class="titik t-petrol"></span><b>Rp 90 juta</b><span>Hadiah dan layanan prioritas untuk 400 pelanggan terbaik, Rp 225.000 per orang</span></li>
       <li><span class="titik t-amber"></span><b>Rp 50 juta</b><span>Uji coba mengajak kembali 552 pelanggan yang baru berhenti belanja: separuh dikirimi program, separuh tidak sebagai pembanding</span></li>
       <li><span class="titik t-slate"></span><b>Rp 10 juta</b><span>Cadangan untuk mengukur hasil program</span></li>
     </ul>
+    <div class="banding" aria-label="Perbandingan anggaran per orang">
+      <div><span>Dibagi rata</span><b>Rp 30.000</b><small>per pelanggan</small></div>
+      <div class="panah" aria-hidden="true">→</div>
+      <div class="banding-baru"><span>Difokuskan</span><b>Rp 225.000</b><small>per pelanggan terbaik</small></div>
+    </div>
   </div>
   </div>
 </header>
