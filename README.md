@@ -181,7 +181,7 @@ Tiga ukuran ditetapkan sebelum program berjalan dan dibaca pada **2026-06-30**:
 | Berkas | Isi |
 |---|---|
 | [`docs/index.html`](docs/index.html) | Halaman portofolio, dipublikasikan lewat GitHub Pages |
-| [`analisis_rfm.ipynb`](analisis_rfm.ipynb) | Seluruh kueri SQL, uji kepekaan, uji bantahan, delapan gambar, dan daftar penugasan uji win-back. [Buka di Colab](https://colab.research.google.com/drive/1yj7O5AYiG0rpYbmpyH6Z7fkHKFSVk2J7) |
+| [`analisis_rfm.ipynb`](analisis_rfm.ipynb) | Seluruh kueri SQL, uji kepekaan, uji bantahan, delapan gambar, dan daftar penugasan uji win-back. [Buka di Colab](https://colab.research.google.com/github/aoramaaulia-collab/Marketplace-RFM-Customer-Segmentation/blob/main/analisis_rfm.ipynb) |
 | [`memo-keputusan_rfm.pdf`](memo-keputusan_rfm.pdf) | Satu halaman untuk pemegang anggaran: rekomendasi, batas, dan syarat pembatal. [Versi Google Drive](https://drive.google.com/file/d/1PL59GrHI-ZD87QTChhbDHAewwFJd4b6Z/view?usp=sharing) |
 | [`catatan-keputusan_rfm.md`](catatan-keputusan_rfm.md) | Setiap definisi, ambang, dan pilihan yang ditolak, berikut alasannya dan kueri final. [Versi Google Docs](https://docs.google.com/document/d/1ZrIZpOtAFbNOBuTuH0Xio1yzUDBXXiJUfLxGqKqqEtY/edit?usp=sharing) |
 | [`lampiran-bukti_rfm.pdf`](lampiran-bukti_rfm.pdf) | Tiga gambar penopang memo dan tabel telusur asal-usul setiap angka |
